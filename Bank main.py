@@ -11,12 +11,12 @@ class Bank:
         if amount < self.min_withdraw:
             return f"Your request is less than minimum withdraw {self.min_withdraw} taka"
         elif amount > self.max_withdraw:
-            return f"You don't take that money because of max_withdraw  {self.max_withdraw} taka"
+            return f" max_withdraw limit exceeded   {self.max_withdraw} taka"
         elif amount > self.balance:
             return "Sorry,not enough money"
         else:
             self.balance = self.balance-amount
-            return f"Here is yuor money : {balance}"
+            return f"Here is your money : {balance}"
     def deposit(self, amount):
         self.balance = self.balance + amount
 
@@ -67,4 +67,4 @@ while option !=0:
 
     print()
     menu()
-    option=int(input("enter ur option: 
+    option=int(input("enter ur option:"))
